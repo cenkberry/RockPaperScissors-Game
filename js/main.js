@@ -8,6 +8,7 @@ const result = document.querySelector('.result');
 
 let userpoint = 0;
 let comppoint = 0;
+
 function newgame() {
     userpoint = 0;
     comppoint = 0;
@@ -18,7 +19,6 @@ function newgame() {
     result.style.color = "#000000"
     compScore.syle.color = "#000000";
     UserScore.syle.color = "#000000";
-
 };
 
 userPaper.addEventListener("mouseover", () => {
@@ -100,11 +100,9 @@ userPaper.addEventListener("click", () => {
         result.innerHTML = "COMPUTER WON!";
         result.style.color = "red";
     }
-
 });
 
 userRock.addEventListener("click", () => {
-
 
     const options = ["paper", "rock", "sciss"];
     const randomNum = Math.floor(Math.random() * 3);
@@ -129,7 +127,6 @@ userRock.addEventListener("click", () => {
         result.innerHTML = "YOU WON!";
         result.style.color = "green";
     }
-
 });
 
 userSciss.addEventListener("click", () => {
@@ -145,19 +142,19 @@ userSciss.addEventListener("click", () => {
         result.innerHTML = "YOU WON!";
         result.style.color = "green";
 
-    } else if (compChoose === "rock") {
+    }
+    else if (compChoose === "rock") {
         compC.innerHTML = `<img src="./img/rock.jpg" alt="">`;
         comppoint++;
         compScore.innerHTML = comppoint;
         result.innerHTML = "COMPUTER WON!";
         result.style.color = "red";
 
-    } else if (compChoose === "sciss") {
+    }
+    else if (compChoose === "sciss") {
         compC.innerHTML = `<img src="./img/sciss.jpg" alt="">`;
         result.innerHTML = "DRAW!";
         result.style.color = "#000000";
 
     }
-
 });
-
