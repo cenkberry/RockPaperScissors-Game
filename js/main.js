@@ -8,6 +8,18 @@ const result = document.querySelector('.result');
 
 let userpoint = 0;
 let comppoint = 0;
+function newgame() {
+    userpoint = 0;
+    comppoint = 0;
+    compC.innerHTML = `<img src="./img/question.png" alt="">`;
+    compScore.innerHTML = userpoint;
+    userScore.innerHTML = comppoint;
+    result.innerHTML = "vs";
+    result.style.color = "#000000"
+    compScore.syle.color = "#000000";
+    UserScore.syle.color = "#000000";
+
+};
 
 userPaper.addEventListener("mouseover", () => {
     userPaper.style.animationName = "move";
@@ -149,13 +161,3 @@ userSciss.addEventListener("click", () => {
 
 });
 
-function newgame() {
-    compC.innerHTML = `<img src="./img/question.png" alt="">`;
-    compScore.innerHTML = 0;
-    userScore.innerHTML = 0;
-    result.innerHTML = "vs";
-    result.style.color = "#000000"
-    compScore.syle.color = "#000000";
-    UserScore.syle.color = "#000000";
-
-};
